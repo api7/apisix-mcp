@@ -4,7 +4,6 @@ APISIX-MCP is a Model Context Protocol Server designed to streamline the managem
 
 https://github.com/user-attachments/assets/081e878c-225e-4ff8-a9c5-5813f4784cfe
 
-
 ## Support Operations
 
 ### Common Operations
@@ -38,9 +37,13 @@ https://github.com/user-attachments/assets/081e878c-225e-4ff8-a9c5-5813f4784cfe
 
 ## Configuration in AI client
 
-1. Follow the APISIX [Getting Started](https://docs.api7.ai/apisix/getting-started/) guide to set up and run APISIX.
+### Prerequisite
 
-2. Configure your AI client (Cursor, Claude, Copilot, etc.) with these settings:
+Follow the APISIX [Getting Started](https://docs.api7.ai/apisix/getting-started/) guide to set up and run APISIX.
+
+### Using npm
+
+Configure your AI client (Cursor, Claude, Copilot, etc.) with following settings:
 
 ```json
 {
@@ -50,6 +53,43 @@ https://github.com/user-attachments/assets/081e878c-225e-4ff8-a9c5-5813f4784cfe
       "args": [
         "-y",
         "apisix-mcp"
+      ],
+      "env": {
+        "APISIX_SERVER_HOST": "your-apisix-server-host",
+        "APISIX_ADMIN_API_PORT": "your-apisix-admin-api-port",
+        "APISIX_ADMIN_API_PREFIX": "your-apisix-admin-api-prefix",
+        "APISIX_API_KEY": "your-apisix-api-key"
+      }
+    }
+  }
+}
+```
+
+### Using source code
+
+First clone the apisix-mcp repository:
+
+```bash
+git clone https://github.com/api7/apisix-mcp.git
+cd apisix-mcp
+```
+
+Install the dependencies and build the project:
+
+```bash
+pnpm install
+pnpm build
+```
+
+Configure your AI client (Cursor, Claude, Copilot, etc.) with following settings:
+
+```json
+{
+  "mcpServers": {
+    "apisix-mcp": {
+      "command": "node",
+      "args": [
+        "your-apisix-mcp-path/build/index.js"
       ],
       "env": {
         "APISIX_SERVER_HOST": "your-apisix-server-host",
