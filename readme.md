@@ -2,6 +2,8 @@
 
 APISIX-MCP is a Model Context Protocol Server designed to streamline the management of APISIX infrastructure through natural language processing. This service enables seamless integration with large language models (LLMs), allowing developers and operators to interact with APISIX resources using conversational interfaces.
 
+<img alt="APISIX MCP Demo" src="https://static.api7.ai/uploads/2025/03/27/EkCx6UD9_MCP-demo.gif" width="70%" />
+
 ## Support Operations
 
 ### Common Operations
