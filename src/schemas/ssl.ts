@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { StatusSchema } from "./common.js";
 
 export const SSLSchema = z
   .object({
@@ -18,7 +19,7 @@ export const SSLSchema = z
       .optional()
       .describe("SSL client configuration"),
     type: z.enum(["server", "client"]).optional().default("server").describe("SSL type"),
-    status: z.number().optional().describe("SSL certificate status"),
+    status: StatusSchema.optional().describe("SSL certificate status"),
     validity_start: z.number().optional().describe("SSL certificate validity start timestamp"),
     validity_end: z.number().optional().describe("SSL certificate validity end timestamp"),
   })

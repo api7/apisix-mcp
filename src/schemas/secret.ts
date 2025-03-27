@@ -27,9 +27,9 @@ const GcpAuthConfigSchema = z.object({
     .default("https://secretmanager.googleapis.com/v1")
     .describe("The API access endpoint for the Google Secrets Manager"),
   scope: z
-    .array(z.string())
+    .string()
     .optional()
-    .default(["https://www.googleapis.com/auth/cloud-platform"])
+    .default("https://www.googleapis.com/auth/cloud-platform")
     .describe("Access scopes of the Google Cloud service account"),
 });
 
