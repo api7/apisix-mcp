@@ -1,0 +1,27 @@
+{
+  "type": "module",
+  "name": "apisix-mcp",
+  "version": "0.0.1",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "node build/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@apidevtools/swagger-parser": "^10.1.1",
+    "@modelcontextprotocol/sdk": "^1.7.0",
+    "axios": "^1.8.4",
+    "js-yaml": "^4.1.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^22.13.10",
+    "typescript": "^5.8.2"
+  }
+}
