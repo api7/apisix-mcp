@@ -16,7 +16,7 @@ import setupProtoTools from "./tools/proto.js";
 
 const server = new McpServer({
   name: "apisix-mcp",
-  version: "0.0.3",
+  version: "0.0.4",
 });
 
 setupCommonTools(server);

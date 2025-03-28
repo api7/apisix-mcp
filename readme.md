@@ -1,6 +1,6 @@
 # APISIX Model Context Protocol (MCP) Server
 
-APISIX Model Context Protocol (MCP) server designed to bridge large language models (LLMs) with the APISIX Admin API. It aims to enable natural language-based interaction for viewing and managing resources in APISIX through MCP-compatible AI clients.
+APISIX Model Context Protocol (MCP) server is used to bridge large language models (LLMs) with the APISIX Admin API. It aims to enable natural language-based interaction for viewing and managing resources in APISIX through MCP-compatible AI clients.
 
 https://github.com/user-attachments/assets/081e878c-225e-4ff8-a9c5-5813f4784cfe
 
