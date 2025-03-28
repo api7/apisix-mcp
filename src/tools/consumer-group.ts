@@ -1,9 +1,9 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { CreateConsumerGroupSchema, UpdateConsumerGroupSchema } from "../schemas/consumer-group.js";
-import { makeAdminAPIRequest } from "../adminAPI.js";
+import makeAdminAPIRequest from "../adminAPI.js";
 
 const setupConsumerGroupTools = (server: McpServer) => {
-  server.tool("create_consumer_group", "Create or update a consumer group", CreateConsumerGroupSchema.shape, async (args) => {
+  server.tool("create_consumer_group", "Create a consumer group", CreateConsumerGroupSchema.shape, async (args) => {
     const groupId = args.id;
     if (!groupId) {
       return await makeAdminAPIRequest("/consumer_groups", "POST", args.consumerGroup);

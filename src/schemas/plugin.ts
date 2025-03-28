@@ -38,10 +38,10 @@ export const PluginConfigSchema = z.object({
 
 export const CreatePluginConfigSchema = z.object({
   id: z.string().describe("plugin config ID"),
-  plugins: PluginSchema,
+  plugins: PluginConfigSchema,
 });
 
 export const UpdatePluginConfigSchema = z.object({
   id: z.string().describe("plugin config ID"),
-  plugins: PluginSchema,
+  plugins: PluginConfigSchema,
 });

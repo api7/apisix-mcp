@@ -3,7 +3,7 @@ import { CreateServiceSchema, UpdateServiceSchema } from "../schemas/service.js"
 import { makeAdminAPIRequest } from "../adminAPI.js";
 
 const setupServiceTools = (server: McpServer) => {
-  server.tool("create_service", "Create or update a service", CreateServiceSchema.shape, async (args) => {
+  server.tool("create_service", "Create a service", CreateServiceSchema.shape, async (args) => {
     const serviceId = args.id;
     if (!serviceId) {
       return await makeAdminAPIRequest(`/services`, "POST", args.service);

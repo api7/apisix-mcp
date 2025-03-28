@@ -3,7 +3,7 @@ import {
   APISIX_SERVER_HOST,
   APISIX_ADMIN_API_PORT,
   APISIX_ADMIN_API_PREFIX,
-  APISIX_API_KEY,
+  APISIX_ADMIN_KEY,
 } from "./env.js";
 import { CallToolResult } from "@modelcontextprotocol/sdk/types.js";
 
@@ -21,7 +21,7 @@ export async function makeAdminAPIRequest(
       url,
       data,
       headers: {
-        "X-API-KEY": APISIX_API_KEY,
+        "X-API-KEY": APISIX_ADMIN_KEY,
         "Content-Type": "application/json",
       },
     });

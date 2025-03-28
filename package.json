@@ -1,35 +1,36 @@
 {
   "type": "module",
-  "name": "apisix-mcp-server",
+  "name": "apisix-mcp",
   "version": "0.0.1",
-  "main": "src/index.js",
-  "bin": "build/index.js",
+  "main": "dist/index.js",
+  "bin": {
+    "apisix-mcp": "dist/index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc",
-    "start": "node build/index.js",
+    "build": "tsc && shx chmod +x dist/*.js",
+    "start": "node dist/index.js",
     "lint": "eslint . --fix"
   },
   "files": [
-    "build"
+    "dist"
   ],
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@apidevtools/swagger-parser": "^10.1.1",
     "@modelcontextprotocol/sdk": "^1.7.0",
     "axios": "^1.8.4",
-    "js-yaml": "^4.1.0",
     "zod": "^3.24.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.23.0",
-    "@types/js-yaml": "^4.0.9",
     "@types/node": "^22.13.10",
     "eslint": "^9.23.0",
     "globals": "^16.0.0",
+    "shx": "^0.4.0",
+    "tsup": "^8.4.0",
     "typescript": "^5.8.2",
     "typescript-eslint": "^8.28.0"
   }

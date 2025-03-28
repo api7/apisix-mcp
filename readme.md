@@ -55,10 +55,10 @@ Configure your AI client (Cursor, Claude, Copilot, etc.) with following settings
         "apisix-mcp"
       ],
       "env": {
-        "APISIX_SERVER_HOST": "your apisix server-host",
+        "APISIX_SERVER_HOST": "your-apisix-server-host",
         "APISIX_ADMIN_API_PORT": "your-apisix-admin-api-port",
         "APISIX_ADMIN_API_PREFIX": "your-apisix-admin-api-prefix",
-        "APISIX_API_KEY": "your-apisix-api-key"
+        "APISIX_ADMIN_KEY": "your-apisix-api-key"
       }
     }
   }
@@ -95,7 +95,7 @@ Configure your AI client (Cursor, Claude, Copilot, etc.) with following settings
         "APISIX_SERVER_HOST": "your-apisix-server-host",
         "APISIX_ADMIN_API_PORT": "your-apisix-admin-api-port",
         "APISIX_ADMIN_API_PREFIX": "your-apisix-admin-api-prefix",
-        "APISIX_API_KEY": "your-apisix-api-key"
+        "APISIX_ADMIN_KEY": "your-apisix-api-key"
       }
     }
   }
@@ -109,6 +109,6 @@ Configure your AI client (Cursor, Claude, Copilot, etc.) with following settings
 | `APISIX_SERVER_HOST`      | Host that have access to your APISIX server | `http://127.0.0.1`                 |
 | `APISIX_ADMIN_API_PORT`   | Admin API port                              | `9180`                             |
 | `APISIX_ADMIN_API_PREFIX` | Admin API prefix                            | `/apisix/admin`                    |
-| `APISIX_API_KEY`          | Admin API authentication key                | `edd1c9f034335f136f87ad84b625c8f1` |
+| `APISIX_ADMIN_KEY`          | Admin API authentication key                | `edd1c9f034335f136f87ad84b625c8f1` |
 
 To view or modify Admin API configurations in APISIX, refer to the [Admin API](https://apisix.apache.org/docs/apisix/admin-api) documentation.

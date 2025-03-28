@@ -3,7 +3,7 @@ import { CreateOrUpdateStreamRouteSchema } from "../schemas/stream-route.js";
 import { makeAdminAPIRequest } from "../adminAPI.js";
 
 const setupStreamRouteTools = (server: McpServer) => {
-  server.tool("create_or_update_stream_route", "Create or update a stream route", CreateOrUpdateStreamRouteSchema.shape, async (args) => {
+  server.tool("create_or_update_stream_route", "Create a stream route, if the stream route already exists, it will be updated", CreateOrUpdateStreamRouteSchema.shape, async (args) => {
     const routeId = args.id;
 
     if (routeId) {
