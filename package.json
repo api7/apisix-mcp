@@ -1,8 +1,20 @@
 {
   "type": "module",
   "name": "apisix-mcp",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/api7/apisix-mcp.git"
+  },
+  "homepage": "https://github.com/api7/apisix-mcp",
+  "keywords": [
+    "apisix",
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "apisix-mcp"
+  ],
   "bin": {
     "apisix-mcp": "dist/index.js"
   },
@@ -15,7 +27,6 @@
   "files": [
     "dist"
   ],
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
