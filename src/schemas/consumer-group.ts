@@ -1,9 +1,12 @@
 import { z } from "zod";
 import { PluginSchema } from "./plugin.js";
-import { PaginationSchema } from "./common.js";
+
 export const ConsumerGroupSchema = z
   .object({
-    labels: z.record(z.string(), z.string()).optional().describe("consumer group labels"),
+    labels: z
+      .record(z.string(), z.string())
+      .optional()
+      .describe("consumer group labels"),
     plugins: PluginSchema.optional().describe("consumer group plugins"),
     desc: z.string().optional().describe("consumer group description"),
   })

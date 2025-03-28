@@ -7,7 +7,7 @@ const setupSecretTools = (server: McpServer) => {
     if (args.id) {
       return await makeAdminAPIRequest(`/secrets/${args.manager}/${args.id}`);
     } else {
-      let query = "";
+      const query = "";
 
       return await makeAdminAPIRequest(`/secrets/${args.manager}?page=${args.page}&page_size=${args.page_size}${query}`);
     }

@@ -1,8 +1,17 @@
 import axios from "axios";
-import { APISIX_SERVER_HOST, APISIX_ADMIN_API_PORT, APISIX_ADMIN_API_PREFIX, APISIX_API_KEY } from "./env.js";
+import {
+  APISIX_SERVER_HOST,
+  APISIX_ADMIN_API_PORT,
+  APISIX_ADMIN_API_PREFIX,
+  APISIX_API_KEY,
+} from "./env.js";
 import { CallToolResult } from "@modelcontextprotocol/sdk/types.js";
 
-export async function makeAdminAPIRequest(path: string, method: string = "GET", data?: object): Promise<CallToolResult> {
+export async function makeAdminAPIRequest(
+  path: string,
+  method: string = "GET",
+  data?: object
+): Promise<CallToolResult> {
   const baseUrl = `${APISIX_SERVER_HOST}:${APISIX_ADMIN_API_PORT}${APISIX_ADMIN_API_PREFIX}`;
   const url = `${baseUrl}${path}`;
 
@@ -28,13 +37,15 @@ export async function makeAdminAPIRequest(path: string, method: string = "GET", 
   } catch (error) {
     if (axios.isAxiosError(error)) {
       console.error(`Request failed: ${method} ${url}`);
-      console.error(`Status: ${error.response?.status}, Error: ${error.message}`);
+      console.error(
+        `Status: ${error.response?.status}, Error: ${error.message}`
+      );
 
       if (error.response?.data) {
         try {
           const stringifiedData = JSON.stringify(error.response.data);
           console.error(`Response data: ${stringifiedData}`);
-        } catch (e) {
+        } catch {
           console.error(`Response data: [Cannot parse as JSON]`);
         }
       }
