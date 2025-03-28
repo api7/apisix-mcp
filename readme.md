@@ -1,6 +1,6 @@
 # APISIX Model Context Protocol (MCP) Server
 
-APISIX-MCP is a Model Context Protocol Server designed to streamline the management of APISIX infrastructure through natural language processing. This service enables seamless integration with large language models (LLMs), allowing developers and operators to interact with APISIX resources using conversational interfaces.
+APISIX Model Context Protocol (MCP) server designed to bridge large language models (LLMs) with the APISIX Admin API. It aims to enable natural language-based interaction for viewing and managing resources in APISIX through MCP-compatible AI clients.
 
 https://github.com/user-attachments/assets/081e878c-225e-4ff8-a9c5-5813f4784cfe
 
@@ -55,7 +55,7 @@ Configure your AI client (Cursor, Claude, Copilot, etc.) with following settings
         "apisix-mcp"
       ],
       "env": {
-        "APISIX_SERVER_HOST": "your-apisix-server-host",
+        "APISIX_SERVER_HOST": "your apisix server-host",
         "APISIX_ADMIN_API_PORT": "your-apisix-admin-api-port",
         "APISIX_ADMIN_API_PREFIX": "your-apisix-admin-api-prefix",
         "APISIX_API_KEY": "your-apisix-api-key"
