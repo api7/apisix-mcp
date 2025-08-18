@@ -1,6 +1,7 @@
 [![MseeP.ai Security Assessment Badge](https://mseep.net/pr/api7-apisix-mcp-badge.png)](https://mseep.ai/app/api7-apisix-mcp)
 
 # APISIX Model Context Protocol (MCP) Server
+[![Trust Score](https://archestra.ai/mcp-catalog/api/badge/quality/api7/apisix-mcp)](https://archestra.ai/mcp-catalog/api7__apisix-mcp)
 [![smithery badge](https://smithery.ai/badge/@api7/apisix-mcp)](https://smithery.ai/server/@api7/apisix-mcp)
 
 APISIX Model Context Protocol (MCP) server is used to bridge large language models (LLMs) with the APISIX Admin API. It aims to enable natural language-based interaction for viewing and managing resources in APISIX through MCP-compatible AI clients.
