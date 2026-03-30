@@ -150,3 +150,8 @@ To view or modify Admin API configurations in APISIX, refer to the [Admin API](h
 ```
 
 
+
+## Hosted deployment
+
+A hosted deployment is available on [Fronteir AI](https://fronteir.ai/mcp/api7-apisix-mcp).
+
