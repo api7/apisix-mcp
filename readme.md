@@ -1,7 +1,7 @@
 [![MseeP.ai Security Assessment Badge](https://mseep.net/pr/api7-apisix-mcp-badge.png)](https://mseep.ai/app/api7-apisix-mcp)
 
 # APISIX Model Context Protocol (MCP) Server
-[![smithery badge](https://smithery.ai/badge/@api7/apisix-mcp)](https://smithery.ai/server/@api7/apisix-mcp)
+[![LightNow capabilities](https://lightnow.ai/badge/io.github.api7/apisix-mcp)](https://lightnow.ai/servers/io.github.api7/apisix-mcp)
 
 APISIX Model Context Protocol (MCP) server is used to bridge large language models (LLMs) with the APISIX Admin API. It aims to enable natural language-based interaction for viewing and managing resources in APISIX through MCP-compatible AI clients.
 
@@ -148,5 +148,4 @@ To view or modify Admin API configurations in APISIX, refer to the [Admin API](h
     client = anthropic.Anthropic()
     response = client.messages.create(model="claude-3-7-sonnet-20250219", max_tokens=1024, tools=tools, messages=[])
 ```
-
 
